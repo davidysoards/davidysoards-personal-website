@@ -1,0 +1,445 @@
+// ======================================
+//  Custom Styles
+// ======================================
+
+/* =BASE ==================================== */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  border-radius: 6px;
+}
+
+h1 {
+  margin: 0;
+  font-family: $fanfare-black;
+  font-size: 5em;
+  color: white;
+  line-height: 1;
+}
+
+h2 {
+  font-family: $albertus;
+  font-size: 2.6em;
+  color: $color-text;
+  @include mq-s {
+    font-size: 3em;
+  }
+}
+
+h3 {
+  margin: 0.6em 0 0.2em;
+  font-family: $albertus;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: $color-text;
+  @include mq-s {
+    font-size: 1.5em;
+  }
+  @include mq-m {
+    font-size: 1.3em;
+  }
+}
+
+h4 {
+  margin: 0.6em 0 0.2em;
+  font-family: $albertus;
+  font-size: 1.1em;
+  color: $color-primary;
+  @include mq-s {
+    font-size: 1.3em;
+  }
+  @include mq-m {
+    font-size: 1.2em;
+  }
+}
+
+p {
+  font-family: $pegasus;
+  color: $color-text;
+  font-size: 1em;
+  @include mq-s {
+    font-size: 1.1em;
+  }
+  @include mq-m {
+    font-size: 1.2em;
+  }
+}
+
+button {
+  background-image: linear-gradient(to bottom,
+    darken($color-secondary,7%) 0%, $color-secondary 50%, darken($color-secondary,13%) 100%);
+  background-size: auto 200%;
+  border: none;
+  padding: 0.5em;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: $albertus;
+  color: white;
+  font-size: 0.8em;
+  box-shadow: 0px 0px 2px rgba($color: black, $alpha: 0.15);
+  transition: 0.3s;
+  &:hover {
+    background-position: bottom;
+  }
+  @include mq-m {
+    font-size: 1em;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 1em 2.5%;
+  max-width: 1200px;
+}
+
+
+// =EXTENDS ==========
+%socials {
+  font-size: 1.3em;
+  color: white;
+  display: grid;
+  grid-gap: 1.6em;
+  grid-auto-flow: column;
+  justify-content: center;
+}
+
+%nav {
+  display: grid;
+  grid-gap: 2.6em;
+  grid-auto-flow: column;
+  justify-content: center;
+  a {
+    font-family: $albertus;
+    font-size: 1em;
+    text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.07);
+  }
+}
+
+
+/* =HEADER ==================================== */
+
+// =MAIN HEADER =========
+.main-header {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  .wrapper {
+    display: grid;
+    grid-gap: 1em;
+    max-width: none;
+    @include mq-m {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}
+
+.main-nav {
+  @extend %nav;
+  a {
+    color: white;
+    @include mq-s {
+      font-size: 1.2em;
+    }
+    @include mq-m {
+      font-size: 1em;
+    }
+    @include mq-l {
+      font-size: 1.3em;
+    }
+  }
+}
+
+.logo {
+  @include mq-l {
+    order: -1;
+  }
+  img {
+    width: 75px;
+    @include mq-l {
+      margin-right: 2em;
+    }
+  }
+}
+
+.socials-header {
+  @extend %socials;
+  @include mq-s {
+    font-size: 1.6em;
+  }
+  @include mq-m {
+    font-size: 1.3em;
+  }
+  @include mq-l {
+    font-size: 1.7em;
+    margin-left: auto;
+  }
+}
+
+// =FIXED HEADER =========
+.fixed-header {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  background: rgba($color: white, $alpha: 0.95);
+  box-shadow: 1px 0 4px rgba($color: black, $alpha: 0.3);
+  .wrapper {
+    display: flex;
+    max-width: none;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  nav {
+    margin-left: auto;
+    @include mq-xs {
+      margin: auto;
+    }
+  }
+}
+
+.logo-fixed {
+  img {
+    width: 50px;
+    @include mq-xs {
+      display: none;
+    }
+  }
+}
+
+.fixed-nav {
+  @extend %nav;
+  a {
+    color: $color-secondary;
+  }
+}
+
+
+/* =FOOTER ==================================== */
+
+footer {
+  display: grid;
+  background: $color-primary-light;
+}
+
+// =CONTACT FORM
+.contact {
+  padding-bottom: 1em;
+  h2 {
+    font-family: $fanfare-black;
+    font-size: 3.5em;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 0.5em;
+    @include mq-s {
+      font-size: 5em;
+    }
+  }
+}
+
+.contact-form {
+  display: grid;
+  grid-gap: 1em;
+  max-width: 768px;
+  margin: 0 auto;
+  button {
+    width: auto;
+    background: rgba($color: black, $alpha: 0.05);
+    border: 2px solid white;
+    color: white;
+    &:hover {
+      background: $color-secondary;
+    }
+    @include mq-s {
+      width: 33%;
+      justify-self: end;
+    }
+  }
+}
+
+// =COPYRIGHT & SOCIALS
+.copyright {
+  grid-column: 1 / -1;
+  background: $color-primary;
+  color: white;
+  .wrapper {
+    display: grid;
+    grid-gap: 1em;
+    @include mq-s {
+      grid-auto-flow: column;
+      align-items: center;
+      justify-items: start;
+    }
+  }
+  p {
+    font-size: 0.9em;
+    margin: 0.6em 0;
+    color: white;
+    text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.07);
+    @include mq-s {
+      justify-self: end;
+    }
+  }
+}
+
+.socials-footer {
+  @extend %socials;
+  @include mq-m {
+    font-size: 1.6em;
+  }
+}
+
+/* =HERO ==================================== */
+
+.hero {
+  display: grid;
+  background: $color-primary-light;
+  min-height: 100vh;
+  z-index: 75;
+  .wrapper {
+    display: grid;
+    grid-gap: 1em;
+    align-content: center;
+    align-items: center;
+    margin-top: 194px;
+    padding-bottom: 5%;
+    @include mq-s {
+      grid-template-columns: 1fr 2fr;
+    }
+    @include mq-m {
+      margin-top: 100px;
+    }
+  }
+  h1 {
+    @include mq-s {
+      font-size: 6em;
+    }
+    @include mq-m {
+      font-size: 8em;
+    }
+    @include mq-l {
+      font-size: 9.2em;
+    }
+  }
+}
+
+/* =HOME PAGE ==================================== */
+
+// =Hero Image ==========
+.big-head {
+  max-width: 100%;
+  max-height: auto;
+}
+
+
+// =I'm a ==========
+.i-am {
+  ul {
+    display: grid;
+    grid-gap: 1em;
+    @include mq-m {
+      grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+  }
+}
+
+
+// =I make ==========
+.i-make {
+  ul {
+    display: grid;
+    grid-gap: 1em;
+    @include mq-m {
+      grid-gap: 1em 3em;
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+  }
+  .i-make-category {
+    display: grid;
+    justify-items: center;
+    p {
+      max-width: 400px;;
+    }
+  }
+}
+
+.process-list {
+  h3 {
+  text-transform: none;
+  }
+}
+
+/* =PORTFOLIO PAGE ==================================== */
+
+.jump-to {
+  p {
+    margin-bottom: 0.5em;
+  }
+  .categories-list { 
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    @media (min-width: 450px) {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+    }
+  }
+}
+
+.category-title {
+  margin-bottom: 1em;
+}
+
+
+
+.websites-list {
+  display: grid;
+  grid-gap: 4em;
+  max-width: 1000px;
+  margin: 0 auto;
+  li {
+    display: grid;
+    grid-gap: 1em;
+    grid-auto-columns: 1fr;
+    padding: 1em;
+    box-shadow: 0px 1px 5px rgba($color: black, $alpha: 0.3);
+    align-items: center;
+    border-radius: 6px;
+    @include mq-m {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+.project-thumb-container {
+  overflow: hidden;
+  max-height: 300px;
+}
+
+%category-grid {
+  display: grid;
+  grid-gap: 1em;
+  @include mq-m {
+    grid-gap: 1em 3em;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+.graphics-list {
+  @extend %category-grid;
+  @include mq-l {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+
+

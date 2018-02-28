@@ -1,0 +1,29 @@
+// ======================================
+//  Variables
+// ======================================
+
+// COLORS
+$color-primary: #62b1d4;
+$color-primary-light: lighten($color-primary,10%); // light blue
+$color-secondary: #ed1c24;
+$color-text: #333333;
+
+
+// Breakpoints
+
+$x-small-bp: '(max-width: 575px)';
+$small-bp: '(min-width: 576px)';
+$medium-bp: '(min-width: 768px)';
+$large-bp: '(min-width: 1024px)';
+
+// Font Stacks
+
+$serif: Georgia, "Times New Roman", serif;
+$sans: "Trebuchet MS", Verdana, sans-serif;
+
+$albertus: "Albertus Nova W01 Light", $sans;
+$fanfare: "Wolpe Fanfare W01 Regular", $sans;
+$fanfare-black: "Wolpe Fanfare W01 Black", $sans;
+$pegasus: "Wolpe Pegasus W01 Regular", $serif;
+
+

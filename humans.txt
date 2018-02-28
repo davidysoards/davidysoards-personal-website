@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans & technology responsible
+
+# TEAM
+
+    David Soards -- Designer/Developer -- @ninjasoards
+
+# THANKS
+
+    Code Louisville
+
+# TECHNOLOGY USED
+
+    CSS3, HTML5
+    jQuery, Greensock, Modernizr, Normalize.css
+    Apache Server Configs
