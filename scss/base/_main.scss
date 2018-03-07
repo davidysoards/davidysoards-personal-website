@@ -105,6 +105,12 @@ button {
   grid-gap: 1.6em;
   grid-auto-flow: column;
   justify-content: center;
+  a {
+    color: white;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
 }
 
 %nav {
@@ -116,6 +122,9 @@ button {
     font-family: $albertus;
     font-size: 1em;
     text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.07);
+    &:hover {
+      color: $color-secondary;
+    }
   }
 }
 
@@ -200,6 +209,9 @@ button {
     @include mq-xs {
       margin: auto;
     }
+  }
+  a:hover {
+    opacity: 0.6;
   }
 }
 
@@ -331,11 +343,16 @@ footer {
 /* =HOME PAGE ==================================== */
 
 // =Hero Image ==========
-.big-head {
+.head-balloon {
   max-width: 100%;
-  max-height: auto;
+  height: auto;
+  overflow: visible;
 }
 
+#balloon,
+#hello {
+  opacity: 0;
+}
 
 // =I'm a ==========
 .i-am {
@@ -375,6 +392,11 @@ footer {
 }
 
 /* =PORTFOLIO PAGE ==================================== */
+.hero.portfolio  {
+  img {
+    box-shadow: none;
+  }
+}
 
 .jump-to {
   p {
@@ -396,8 +418,7 @@ footer {
   margin-bottom: 1em;
 }
 
-
-
+// =Websites
 .websites-list {
   display: grid;
   grid-gap: 4em;
@@ -425,16 +446,62 @@ footer {
 %category-grid {
   display: grid;
   grid-gap: 1em;
+  justify-items: center;
   @include mq-m {
     grid-gap: 1em 3em;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+// =Graphics
 .graphics-list {
   @extend %category-grid;
   @include mq-l {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .item {
+    width: 300px;
+    display: grid;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 6px;
+    img {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      border-radius: none;
+    }
+    &:hover {
+      .item_overlay {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .item_overlay {
+    background: rgba($color: #000000, $alpha: 0.2);
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    transform: translateY(100%);
+    transition: 0.3s;
+    .text-container {
+      background: $color-primary-dark;
+      width: 100%;
+    }
+    p {
+      color: white;
+      margin-bottom: 0.6em;
+    }
+    button {
+      background: rgba($color: #000000, $alpha: 0.2);
+      border: 2px solid white;
+      &:hover {
+        background: $color-secondary;
+      }
+    }
+
   }
 }
 

@@ -3,8 +3,9 @@
 // ======================================
 
 // COLORS
-$color-primary: #62b1d4;
-$color-primary-light: lighten($color-primary,10%); // light blue
+$color-primary: #62b1d4; // light blue
+$color-primary-light: lighten($color-primary,10%); 
+$color-primary-dark: darken($color-primary,10%);
 $color-secondary: #ed1c24;
 $color-text: #333333;
 

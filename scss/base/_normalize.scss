@@ -116,8 +116,12 @@ img {
   border-style: none;
 }
 
-svg:not(:root) {
+svg {
   overflow: hidden;
+}
+
+svg:root {
+  overflow: visible;
 }
 
 button,
