@@ -4,7 +4,8 @@
 
 // Utility
 @import 'utility/variables.scss',
-        'utility/mixins.scss';
+        'utility/mixins.scss',
+        'utility/extends.scss';
 
 // Base
 @import 'base/normalize.scss',

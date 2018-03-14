@@ -5,9 +5,10 @@
 // COLORS
 $color-primary: #62b1d4; // light blue
 $color-primary-light: lighten($color-primary,10%); 
+$color-primary-lighter: lighten($color-primary,30%); 
 $color-primary-dark: darken($color-primary,10%);
 $color-secondary: #ed1c24;
-$color-text: #333333;
+$color-text: rgba(black, 0.8);
 
 
 // Breakpoints

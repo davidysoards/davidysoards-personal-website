@@ -37,7 +37,7 @@
     </script>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="portfolio-page">
     <!--[if lte IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
@@ -46,12 +46,12 @@
         <div class="wrapper">
           <nav>
             <ul class="main-nav">
-              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="portfolio.html" class="current-page">Portfolio</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="writing.html">Writing</a></li>
             </ul>
           </nav>
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img src="img/DYS-logo-150.gif" alt="DYS logo">
           </a>
           <ul class="socials-header">
@@ -67,12 +67,12 @@
       <!-- fixed sticky nav -->
       <header class="fixed-header">
         <div class="wrapper">
-          <a href="#" class="logo-fixed">
+          <a href="index.html" class="logo-fixed">
             <img src="img/DYS-logo-150.gif" alt="DYS logo">
           </a>
           <nav>
             <ul class="fixed-nav">
-              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="portfolio.html" class="current-page">Portfolio</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="writing.html">Writing</a></li>
             </ul>
@@ -89,59 +89,59 @@
     </section>
     
     <main class="portfolio">
-      <h2>Portfolio</h2>
-      <section class="jump-to">
-        <div class="wrapper">
+      <div class="wrapper">
+        <h2>Portfolio</h2>
+        <section class="jump-to">
           <p>Jump to:</p>
           <div class="categories-list">
-            <a href="#"><button>Websites</button></a>
-            <a href="#"><button>Graphics</button></a>
-            <a href="#"><button>Animations</button></a>
-            <a href="#"><button>Art &amp; Comics</button></a>
+            <a href="#websites"><button>Websites</button></a>
+            <a href="#graphics"><button>Graphics</button></a>
+            <a href="#animations"><button>Animations</button></a>
+            <a href="#art-comics"><button>Art &amp; Comics</button></a>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      <section class="websites">
+      <section id="websites">
         <div class="wrapper">
           <h3 class="category-title">Websites</h3> 
           <ul class="websites-list">
 
-            <li class="project-full">
-              <div class="project-thumb-container">
+            <li class="website-full">
+              <div class="website-thumb-container">
                 <img src="img/duckduckbeet-full-crop.jpg" alt="">
               </div>
-              <div class="project-content-container">
+              <div class="website-content-container">
                 <h4>Project Title</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nunc quam, porttitor non lacus.</p>
               </div>  
             </li>
 
-            <li class="project-full">
-              <div class="project-thumb-container">
+            <li class="website-full">
+              <div class="website-thumb-container">
                 <img src="img/MFW-home-screenshot.jpg" alt="">
               </div>
-              <div class="project-content-container">
+              <div class="website-content-container">
                 <h4>Project Title</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nunc quam, porttitor non lacus.</p>
               </div>  
             </li>
 
-            <li class="project-full">
-              <div class="project-thumb-container">
+            <li class="website-full">
+              <div class="website-thumb-container">
                 <img src="img/paint-it-sweet-crop.jpg" alt="">
               </div>
-              <div class="project-content-container">
+              <div class="website-content-container">
                 <h4>Project Title</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nunc quam, porttitor non lacus.</p>
               </div>  
             </li>
 
-            <li class="project-full">
-              <div class="project-thumb-container">
+            <li class="website-full">
+              <div class="website-thumb-container">
                 <img src="img/DDB-Farmer.png" alt="">
               </div>
-              <div class="project-content-container">
+              <div class="website-content-container">
                 <h4>Project Title</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nunc quam, porttitor non lacus.</p>
               </div>  
@@ -151,80 +151,426 @@
         </div><!-- /wrapper -->
       </section><!-- /websites -->
 
-      <section class="graphics">
+      <section id="graphics">
         <div class="wrapper">
-        <h3 class="category-title">Graphics</h3>
-        <ul class="graphics-list">
-          <li class="item">
-            <img src="img/DDB-Farmer.png">
-            <div class="item_overlay">
-              <a href="img/MFW-home-screenshot.jpg" data-lightbox="image-1" data-title="My caption">
-                <button>View →</button>
-              </a>
-              <div class="text-container">
-                <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <img src="img/DavidSoards-gradient-512px.jpg">
-            <div class="item_overlay">
-              <button>View →</button>
-              <div class="text-container">
-                <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <img src="img/DavidSoards-gradient-512px.jpg">
-            <div class="item_overlay">
-              <button>View →</button>
-              <div class="text-container">
-                <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <img src="img/DavidSoards-gradient-512px.jpg">
-            <div class="item_overlay">
-              <button>View →</button>
-              <div class="text-container">
-                <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <img src="img/DavidSoards-gradient-512px.jpg">
-            <div class="item_overlay">
-              <button>View →</button>
-              <div class="text-container">
-                <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <img src="img/DavidSoards-gradient-512px.jpg">
-            <div class="item_overlay">
-              <button>View →</button>
-              <div class="text-container">
-                <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <h3 class="category-title">Graphics</h3>
+          <ul class="graphics-list">
 
-      <section class="animations">
+            <a href="img/legends-drink-draw.jpg" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/drink-draw-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/DYS-self-creepy.png" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/DYS-self-creepy-thumb.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/ddb-illustrations.png" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/ddb-farmer_thumb.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/FLI-real-estate-flyer.jpg" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/FLI-real-estate-flyer-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/gretel-david-side_1.png" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/gretel-david-emblem.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/gretel-david-sign-church.jpg" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/gretel-david-sign-thumb.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/Garden-Variety-f-and-b.jpg" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/Garden-Variety-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/lcs-western-logo-1.jpg" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/lcs-western-logo-1-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/legends-logo.jpg" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/legends-logo-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/lou-posterama.png" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/lou-posterama-thumb.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/lou-blippo.png" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/lou-blippo-thumb.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/mfw-logos.png" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/mfw-logo-thumb.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/mpc-3000.png" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/mpc-3000-thumb.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/paint-and-sip.png" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/paint-and-sip-thumb.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/paint-it-sweet-logo.png" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/paint-it-sweet-thumb.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/Renfro_logos.png" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/RENFRO-truck-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/farm-to-table.png" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/farm-to-table-thumb.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/comic-creator-desk-mock.jpg" data-lightbox="graphics" data-title="My caption">
+              <li class="item">
+                <img src="img/Comic-Creator-logo.png">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+          </ul>
+        </div><!-- end wrapper -->
+      </section><!-- end graphics -->
+
+      <section id="animations">
         <h3 class="category-title">Animations</h3>
         <div class="wrapper">
+          
         </div>
       </section>
 
-      <section class="art-comics">
+      <section id="art-comics">
         <h3 class="category-title">Art &amp; Comics</h3>
         <div class="wrapper">
-        </div>
-      </section>
+          <ul class="art-list">
+
+            <a href="img/batman-perspective.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/batman-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/conan-buscema.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/conan-buscema-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/Defenders.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/Defenders-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/pet-portrait-1.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/pet-portrait-1-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/Frankenstein-book-cover.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/Frankenstein-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/the-Beatles.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/the-Beatles-THUMB.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/the-dude.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/the-dude-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/THE-GREATEST.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/THE-GREATEST-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/The-Stilgers.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/The-Stilgers-THUMB.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/pet-portrait-2.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/pet-portrait-2-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/pet-portrait-3.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/pet-portrait-3-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/three-birds.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/three-birds-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/two-face-sketch-cover.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/two-face-sketch-cover-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/Vader.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/Vader-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/king-theo.jpg" data-lightbox="art" data-title="My caption">
+              <li class="item">
+                <img src="img/king-theo-thumb.jpg">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Test testing test 1, 2, 3. More writing and more writing. This should be enough.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+          </ul>
+        </div><!-- end wrapper -->
+      </section><!-- end art-comics -->
 
     </main>
 
