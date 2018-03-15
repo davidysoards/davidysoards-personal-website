@@ -438,10 +438,6 @@ main {
   @extend %webs-grid;
 }
 
-.website-thumb-container {
-  @extend %thumb-container;
-}
-
 // =Graphics
 .graphics-list {
   @extend %category-grid;
@@ -471,8 +467,4 @@ body.writing-page {
 
 .writing-list {
   @extend %webs-grid;
-}
-
-.writing-thumb-container {
-  @extend %thumb-container;
 }

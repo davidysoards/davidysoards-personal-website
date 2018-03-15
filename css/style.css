@@ -75,7 +75,7 @@
   margin: 0 auto; }
   .websites-list li, .writing-list li {
     display: grid;
-    grid-gap: 1em;
+    grid-gap: 2em;
     grid-auto-columns: 1fr;
     padding: 1em;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
@@ -84,14 +84,15 @@
     @media only screen and (min-width: 768px) {
       .websites-list li, .writing-list li {
         grid-template-columns: 1fr 1fr; } }
-
-.website-thumb-container, .writing-thumb-container {
-  overflow: hidden;
-  max-height: 300px;
-  border-radius: 6px; }
-  .website-thumb-container img, .writing-thumb-container img {
-    border-radius: none;
-    box-shadow: none; }
+    .websites-list li .content-container, .writing-list li .content-container {
+      text-align: left; }
+    .websites-list li .thumb-container, .writing-list li .thumb-container {
+      overflow: hidden;
+      max-height: 300px;
+      border-radius: 6px; }
+      .websites-list li .thumb-container img, .writing-list li .thumb-container img {
+        border-radius: none;
+        box-shadow: none; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
