@@ -169,9 +169,9 @@ html.lb-disable-scrolling {
 }
 
 .lb-data .lb-caption {
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 1em;
+  font-size: 1em;
+  line-height: 1.05em;
+  font-family: $albertus;
 }
 
 .lb-data .lb-caption a {
@@ -182,8 +182,9 @@ html.lb-disable-scrolling {
   display: block;
   clear: left;
   padding-bottom: 1em;
-  font-size: 12px;
   color: #999999;
+  font-family: $pegasus;
+  font-size: 0.8em;
 }
 
 .lb-data .lb-close {

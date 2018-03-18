@@ -68,6 +68,9 @@ p {
     font-size: 1.2em;
   }
 }
+a {
+  color: $color-secondary;
+}
 
 button {
   background-image: linear-gradient(to bottom,
@@ -185,9 +188,9 @@ nav {
   }
   nav {
     margin-left: auto;
-    @include mq-xs {
-      margin: auto;
-    }
+    // @include mq-xs {
+    //   margin: auto;
+    // }
   }
   a:hover {
     opacity: 0.6;
@@ -197,9 +200,9 @@ nav {
 .logo-fixed {
   img {
     width: 50px;
-    @include mq-xs {
-      display: none;
-    }
+    // @include mq-xs {
+    //   display: none;
+    // }
   }
 }
 
@@ -220,7 +223,7 @@ footer {
 }
 
 // =CONTACT FORM
-.contact {
+#contact {
   padding-bottom: 1em;
   h2 {
     font-family: $fanfare-black;
@@ -306,6 +309,7 @@ main {
     align-items: center;
     margin-top: 194px;
     padding-bottom: 5%;
+    overflow: hidden;
     @include mq-s {
       grid-template-columns: 1fr 2fr;
     }
@@ -355,8 +359,8 @@ main {
   }
 }
 
-// =I make ==========
-.i-make {
+// =I create ==========
+.i-create {
   background: $color-primary-lighter;
 
   ul {
@@ -368,18 +372,18 @@ main {
       grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
   }
-  .i-make-category {
+  .i-create-category {
     display: grid;
     justify-items: center;
     max-width: 400px;
+    p {
+      text-align: left;
+    }
   }
 }
 
-// =I write ==========
-.i-write {
-  .my-process {
-    margin-bottom: 0.6em;
-  }
+// =process ==========
+.process {
   ul {
     display: grid;
     grid-gap: 1em;
@@ -390,8 +394,13 @@ main {
     @include mq-m {
       grid-template-columns: repeat(3, minmax(150px, 1fr));
     }
+  li {
+    p {
+      text-align: left;
+    }
   }
-  .writing-button-container {
+  }
+  .process-button-container {
     margin-top: 1em;
   }
 }
@@ -430,12 +439,15 @@ main {
   padding-bottom: 3em;
 }
 
-.website-full {
-  background: white;
-}
-
 .websites-list {
   @extend %webs-grid;
+}
+
+.website-full {
+  background: white;
+  a:hover {
+    opacity: 0.6;
+  }
 }
 
 // =Graphics
@@ -452,19 +464,4 @@ main {
   .item {
     @extend %item-with-overlay;
   }
-}
-
-
-/* =WRITING PAGE ==================================== */
-
-body.writing-page {
-  background: $color-primary-lighter;
-}
-
-.writing-full {
-  background: white;
-}
-
-.writing-list {
-  @extend %webs-grid;
 }

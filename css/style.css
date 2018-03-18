@@ -58,7 +58,8 @@
     transition: 0.3s; }
     .graphics-list .item .item_overlay .text-container, .art-list .item .item_overlay .text-container {
       background: #3a9dc9;
-      width: 100%; }
+      width: 100%;
+      padding: 0.3em; }
     .graphics-list .item .item_overlay p, .art-list .item .item_overlay p {
       color: white;
       margin-bottom: 0.6em; }
@@ -68,12 +69,12 @@
       .graphics-list .item .item_overlay button:hover, .art-list .item .item_overlay button:hover {
         background: #ed1c24; }
 
-.websites-list, .writing-list {
+.websites-list {
   display: grid;
   grid-gap: 4em;
   max-width: 1000px;
   margin: 0 auto; }
-  .websites-list li, .writing-list li {
+  .websites-list li {
     display: grid;
     grid-gap: 2em;
     grid-auto-columns: 1fr;
@@ -82,15 +83,15 @@
     align-items: center;
     border-radius: 6px; }
     @media only screen and (min-width: 768px) {
-      .websites-list li, .writing-list li {
+      .websites-list li {
         grid-template-columns: 1fr 1fr; } }
-    .websites-list li .content-container, .writing-list li .content-container {
+    .websites-list li .content-container {
       text-align: left; }
-    .websites-list li .thumb-container, .writing-list li .thumb-container {
+    .websites-list li .thumb-container {
       overflow: hidden;
       max-height: 300px;
       border-radius: 6px; }
-      .websites-list li .thumb-container img, .writing-list li .thumb-container img {
+      .websites-list li .thumb-container img {
         border-radius: none;
         box-shadow: none; }
 
@@ -643,9 +644,9 @@ html.lb-disable-scrolling {
   line-height: 1.1em; }
 
 .lb-data .lb-caption {
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 1em; }
+  font-size: 1em;
+  line-height: 1.05em;
+  font-family: "Albertus Nova W01 Light", "Trebuchet MS", Verdana, sans-serif; }
 
 .lb-data .lb-caption a {
   color: #4ae; }
@@ -654,8 +655,9 @@ html.lb-disable-scrolling {
   display: block;
   clear: left;
   padding-bottom: 1em;
-  font-size: 12px;
-  color: #999999; }
+  color: #999999;
+  font-family: "Wolpe Pegasus W01 Regular", Georgia, "Times New Roman", serif;
+  font-size: 0.8em; }
 
 .lb-data .lb-close {
   display: block;
@@ -735,6 +737,9 @@ p {
   @media only screen and (min-width: 768px) {
     p {
       font-size: 1.2em; } }
+
+a {
+  color: #ed1c24; }
 
 button {
   background-image: linear-gradient(to bottom, #d41118 0%, #ed1c24 50%, #b80f15 100%);
@@ -825,17 +830,11 @@ nav a.current-page {
     padding-bottom: 5px; }
   .fixed-header nav {
     margin-left: auto; }
-    @media only screen and (max-width: 575px) {
-      .fixed-header nav {
-        margin: auto; } }
   .fixed-header a:hover {
     opacity: 0.6; }
 
 .logo-fixed img {
   width: 50px; }
-  @media only screen and (max-width: 575px) {
-    .logo-fixed img {
-      display: none; } }
 
 .fixed-nav a {
   color: #ed1c24; }
@@ -846,16 +845,16 @@ footer {
   background: #8ac5df;
   margin-top: 1em; }
 
-.contact {
+#contact {
   padding-bottom: 1em; }
-  .contact h2 {
+  #contact h2 {
     font-family: "Wolpe Fanfare W01 Black", "Trebuchet MS", Verdana, sans-serif;
     font-size: 3.5em;
     line-height: 1.1;
     color: white;
     margin-bottom: 0.5em; }
     @media only screen and (min-width: 576px) {
-      .contact h2 {
+      #contact h2 {
         font-size: 5em; } }
 
 .contact-form {
@@ -917,7 +916,8 @@ main {
     align-content: center;
     align-items: center;
     margin-top: 194px;
-    padding-bottom: 5%; }
+    padding-bottom: 5%;
+    overflow: hidden; }
     @media only screen and (min-width: 576px) {
       .hero .wrapper {
         grid-template-columns: 1fr 2fr; } }
@@ -954,33 +954,35 @@ main {
     .i-am ul {
       grid-template-columns: repeat(3, minmax(150px, 1fr)); } }
 
-.i-make {
+.i-create {
   background: #daedf5; }
-  .i-make ul {
+  .i-create ul {
     display: grid;
     grid-gap: 1em;
     justify-items: center; }
     @media only screen and (min-width: 768px) {
-      .i-make ul {
+      .i-create ul {
         grid-gap: 1em 3em;
         grid-template-columns: repeat(2, minmax(300px, 1fr)); } }
-  .i-make .i-make-category {
+  .i-create .i-create-category {
     display: grid;
     justify-items: center;
     max-width: 400px; }
+    .i-create .i-create-category p {
+      text-align: left; }
 
-.i-write .my-process {
-  margin-bottom: 0.6em; }
-.i-write ul {
+.process ul {
   display: grid;
   grid-gap: 1em; }
-  .i-write ul h3 {
+  .process ul h3 {
     text-transform: none;
     color: rgba(0, 0, 0, 0.8); }
   @media only screen and (min-width: 768px) {
-    .i-write ul {
+    .process ul {
       grid-template-columns: repeat(3, minmax(150px, 1fr)); } }
-.i-write .writing-button-container {
+  .process ul li p {
+    text-align: left; }
+.process .process-button-container {
   margin-top: 1em; }
 
 /* =PORTFOLIO PAGE ==================================== */
@@ -1009,12 +1011,7 @@ main {
 
 .website-full {
   background: white; }
-
-/* =WRITING PAGE ==================================== */
-body.writing-page {
-  background: #daedf5; }
-
-.writing-full {
-  background: white; }
+  .website-full a:hover {
+    opacity: 0.6; }
 
 /*# sourceMappingURL=style.css.map */
