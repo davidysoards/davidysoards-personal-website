@@ -458,6 +458,34 @@ main {
   }
 }
 
+// =Animation
+#animation {
+  background: $color-primary-lighter;
+  padding-bottom: 2em;
+}
+
+.animation-list {
+  @extend %category-grid;
+  .item {
+    @extend %item-with-overlay;
+  }
+}
+
+// =RESPONSIVE EMBEDED YOUTUBE VIDEO
+// .video-responsive{
+//   overflow:hidden;
+//   padding-bottom:56.25%;
+//   position:relative;
+//   height:0;
+//   iframe{
+//     left:0;
+//     top:0;
+//     height:100%;
+//     width:100%;
+//     position:absolute;
+//   }
+// }
+
 // =Art & Comics
 .art-list {
   @extend %category-grid;

@@ -8,6 +8,10 @@ lightbox.option({
   // 'fitImagesInViewport': false,
 });
 
+
+/********** 
+=ANIMATIONS
+**********/
 // hero homepage big head bubble tween
 const $headBalloon = $('.head-balloon'),
       $bighead = $('#bighead'),
@@ -27,8 +31,10 @@ const $desk = $('.desk-illustration');
 
 TweenLite.fromTo($desk, 1.8, {x: '300%', autoAlpha: 0}, {x: '0%', autoAlpha: 1, ease: Back.easeOut.config(0.7)});
 
-//=SCROLL TO IDs
 
+/********** 
+=SCROLL TO IDs
+**********/
 // handle links with @href started with '#' only
 $(document).on('click', 'a[href^="#"]', function(e) {
   // target element id
@@ -49,3 +55,4 @@ $(document).on('click', 'a[href^="#"]', function(e) {
   // animated top scrolling
   $('body, html').animate({scrollTop: pos});
 });
+

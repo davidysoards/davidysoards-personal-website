@@ -22,32 +22,32 @@
     .main-nav a:hover, .fixed-nav a:hover {
       color: #ed1c24; }
 
-.graphics-list, .art-list {
+.graphics-list, .animation-list, .art-list {
   display: grid;
   grid-gap: 2em;
   justify-items: center; }
   @media only screen and (min-width: 768px) {
-    .graphics-list, .art-list {
+    .graphics-list, .animation-list, .art-list {
       grid-template-columns: repeat(2, 1fr); } }
   @media only screen and (min-width: 1024px) {
-    .graphics-list, .art-list {
+    .graphics-list, .animation-list, .art-list {
       grid-template-columns: repeat(3, 1fr); } }
 
-.graphics-list .item, .art-list .item {
+.graphics-list .item, .animation-list .item, .art-list .item {
   width: 300px;
   display: grid;
   justify-content: center;
   overflow: hidden;
   border-radius: 6px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3); }
-  .graphics-list .item img, .art-list .item img {
+  .graphics-list .item img, .animation-list .item img, .art-list .item img {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     border-radius: none;
     box-shadow: none; }
-  .graphics-list .item:hover .item_overlay, .art-list .item:hover .item_overlay {
+  .graphics-list .item:hover .item_overlay, .animation-list .item:hover .item_overlay, .art-list .item:hover .item_overlay {
     transform: translateY(0); }
-  .graphics-list .item .item_overlay, .art-list .item .item_overlay {
+  .graphics-list .item .item_overlay, .animation-list .item .item_overlay, .art-list .item .item_overlay {
     background: rgba(0, 0, 0, 0.2);
     grid-column: 1 / -1;
     grid-row: 1 / -1;
@@ -56,17 +56,17 @@
     align-items: end;
     transform: translateY(100%);
     transition: 0.3s; }
-    .graphics-list .item .item_overlay .text-container, .art-list .item .item_overlay .text-container {
+    .graphics-list .item .item_overlay .text-container, .animation-list .item .item_overlay .text-container, .art-list .item .item_overlay .text-container {
       background: #3a9dc9;
       width: 100%;
       padding: 0.3em; }
-    .graphics-list .item .item_overlay p, .art-list .item .item_overlay p {
+    .graphics-list .item .item_overlay p, .animation-list .item .item_overlay p, .art-list .item .item_overlay p {
       color: white;
       margin-bottom: 0.6em; }
-    .graphics-list .item .item_overlay button, .art-list .item .item_overlay button {
+    .graphics-list .item .item_overlay button, .animation-list .item .item_overlay button, .art-list .item .item_overlay button {
       background: rgba(0, 0, 0, 0.2);
       border: 2px solid white; }
-      .graphics-list .item .item_overlay button:hover, .art-list .item .item_overlay button:hover {
+      .graphics-list .item .item_overlay button:hover, .animation-list .item .item_overlay button:hover, .art-list .item .item_overlay button:hover {
         background: #ed1c24; }
 
 .websites-list {
@@ -679,6 +679,64 @@ html.lb-disable-scrolling {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
 
+/* Parent element can be any width and height */
+.parent {
+  position: fixed;
+  width: 100%;
+  /* can be any width */
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+  text-align: center;
+  z-index: 999; }
+
+.parent:before {
+  /* pseudo element to force vertical centering of child element */
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+.parent:after {
+  /* pseudo element to create overlay */
+  background: black;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 10; }
+
+/* Centered child element can be any width and height */
+.centeredchild {
+  position: relative;
+  /* position element to participate in z-indexing */
+  z-index: 20;
+  /* higher z-index than overlay */
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  /* can be any width */ }
+
+/* Video container to maintain Youtube 16:9 aspect ratio */
+.videowrapper {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  height: 0; }
+
+/* Make Youtube IFRAME responsive */
+.videowrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 /* =BASE ==================================== */
 body {
   display: flex;
@@ -1013,5 +1071,9 @@ main {
   background: white; }
   .website-full a:hover {
     opacity: 0.6; }
+
+#animation {
+  background: #daedf5;
+  padding-bottom: 2em; }
 
 /*# sourceMappingURL=style.css.map */

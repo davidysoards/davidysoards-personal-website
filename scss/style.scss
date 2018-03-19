@@ -7,11 +7,13 @@
         'utility/mixins.scss',
         'utility/extends.scss';
 
-// Base
-@import 'base/normalize.scss',
-        'base/base.scss',
-        'base/resets.scss',
-        'base/lightbox2.scss',
-        'base/main.scss';
+// Resets
+@import 'resets/normalize.scss',
+        'resets/base.scss',
+        'resets/resets.scss';
 
+// Base
+@import 'base/lightbox2.scss',
+        'base/youtubelightbox.scss',
+        'base/main.scss';
 
