@@ -12,8 +12,11 @@
         'resets/base.scss',
         'resets/resets.scss';
 
-// Base
-@import 'base/lightbox2.scss',
-        'base/youtubelightbox.scss',
-        'base/main.scss';
+// Plugin
+@import 'extras/lightbox2.scss',
+        'extras/youtubelightbox.scss',
+        'extras/animation.scss';
+
+//Base
+@import 'base/main.scss';
 

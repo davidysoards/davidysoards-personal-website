@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>David Soards | Portfolio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,18 +14,21 @@
     <style type="text/css">
       @font-face{
           font-family:"Albertus Nova W01 Light";
-          src:url("Fonts/a92b1373-255d-4e1e-a778-da77c2416cbd.woff2") format("woff2"),url("Fonts/bf5f80ca-ad25-4894-a688-8bcfd3c0060a.woff") format("woff");
+          src:url("Fonts/da5aa890-f119-4d9b-bd71-ba2672ce4fbd.eot?#iefix");
+          src:url("Fonts/da5aa890-f119-4d9b-bd71-ba2672ce4fbd.eot?#iefix") format("eot"),url("Fonts/a92b1373-255d-4e1e-a778-da77c2416cbd.woff2") format("woff2"),url("Fonts/bf5f80ca-ad25-4894-a688-8bcfd3c0060a.woff") format("woff"),url("Fonts/cbc11934-6c85-46dd-9edc-cdaa0573f8f8.ttf") format("truetype"),url("Fonts/fb41ad70-c860-40d9-8f14-e632082a04ab.svg#fb41ad70-c860-40d9-8f14-e632082a04ab") format("svg");
       }
       @font-face{
           font-family:"Wolpe Pegasus W01 Regular";
-          src:url("Fonts/135a2f50-c30e-416a-9f02-2b72ab2b4dd1.woff2") format("woff2"),url("Fonts/df9c7cd0-6b1d-49b7-8547-3a2fc6dff861.woff") format("woff");
+          src:url("Fonts/3b3c85bc-d4c9-4846-8afd-3b50166045b8.eot?#iefix");
+          src:url("Fonts/3b3c85bc-d4c9-4846-8afd-3b50166045b8.eot?#iefix") format("eot"),url("Fonts/135a2f50-c30e-416a-9f02-2b72ab2b4dd1.woff2") format("woff2"),url("Fonts/df9c7cd0-6b1d-49b7-8547-3a2fc6dff861.woff") format("woff"),url("Fonts/63e47120-4f26-4a2f-80e2-55201685a69b.ttf") format("truetype"),url("Fonts/d957761f-f9cf-499f-8212-798c7b7234b0.svg#d957761f-f9cf-499f-8212-798c7b7234b0") format("svg");
       }
       @font-face{
           font-family:"Wolpe Fanfare W01 Black";
-          src:url("Fonts/b8780533-c46d-4f5c-b13d-94a7e7e3986b.woff2") format("woff2"),url("Fonts/55406010-b023-44f3-b4c1-8d107ff9e913.woff") format("woff");
+          src:url("Fonts/850aa7fd-a4f3-4bb7-b772-e5b3e71db9d0.eot?#iefix");
+          src:url("Fonts/850aa7fd-a4f3-4bb7-b772-e5b3e71db9d0.eot?#iefix") format("eot"),url("Fonts/b8780533-c46d-4f5c-b13d-94a7e7e3986b.woff2") format("woff2"),url("Fonts/55406010-b023-44f3-b4c1-8d107ff9e913.woff") format("woff"),url("Fonts/6114bddd-4309-4085-a262-53d571bf1098.ttf") format("truetype"),url("Fonts/75bb6028-9103-493d-bd94-2b61a6523a54.svg#75bb6028-9103-493d-bd94-2b61a6523a54") format("svg");
       }
     </style>
-    <script type="text/javascript">
+    <script>
     var MTIProjectId='086c51a6-d59a-484f-ad1d-7ae0d2e6c965';
     (function() {
             var mtiTracking = document.createElement('script');
@@ -51,7 +54,7 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
-          <a href="index.html" class="logo">
+          <a href="index.html" class="logo pulse-hover">
             <img src="img/DYS-logo-150.gif" alt="DYS logo">
           </a>
           <ul class="socials-header">
@@ -84,11 +87,14 @@
     <section class="hero portfolio">
       <div class="wrapper">
         <h1>My Work</h1>
-        <img src="img/desk.svg" class="desk-illustration" alt="illustration of desk with a laptop, external monitor and speakers">
+        <img src="img/desk.svg" id="desk-illustration" alt="illustration of desk with a laptop, external monitor and speakers">
+        <div class="arrow">
+          <a href="#scroll-down"><img src="img/double-down.svg" alt="double down arrow" class="float bounce-hover"></i></a>
+        </div>
       </div>
     </section>
     
-    <main class="portfolio">
+    <main class="portfolio" id="scroll-down">
       <div class="wrapper">
         <h2>Portfolio</h2>
         <section class="jump-to">
@@ -194,6 +200,18 @@
                   <button tabindex="-1">View →</button>
                   <div class="text-container">
                     <p>Iconography for the Farm to Table business.</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+
+            <a href="img/ddb-labels-1920.png" data-lightbox="graphics" data-title="Duck Duck Beet Fire Cider bottle label and food labels featuring the new beet-duck symbol.">
+              <li class="item">
+                <img src="img/ddb-labels-thumb.png" alt="duck duck beet fire cider label">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Duck Duck Beet Fire Cider bottle and food item labels.</p>
                   </div>
                 </div>
               </li>
@@ -380,19 +398,7 @@
                   </div>
                 </div>
               </li>
-            </a>        
-
-            <a href="img/DYS-self-creepy.png" data-lightbox="graphics" data-title="Self-portrait with Creepy Eyes">
-              <li class="item">
-                <img src="img/DYS-self-creepy-thumb.png" alt="david soards vector art with black eyes">
-                <div class="item_overlay">
-                  <button tabindex="-1">View →</button>
-                  <div class="text-container">
-                    <p>Self-portrait with Creepy Eyes</p>
-                  </div>
-                </div>
-              </li>
-            </a>            
+            </a>                 
 
           </ul>
         </div><!-- end wrapper -->
@@ -746,6 +752,18 @@
                 </div>
               </li>
             </a>
+
+            <a href="img/DYS-self-creepy.png" data-lightbox="art" data-title="Self-portrait with Creepy Eyes">
+              <li class="item">
+                <img src="img/DYS-self-creepy-thumb.png" alt="david soards vector art with black eyes">
+                <div class="item_overlay">
+                  <button tabindex="-1">View →</button>
+                  <div class="text-container">
+                    <p>Self-portrait with Creepy Eyes</p>
+                  </div>
+                </div>
+              </li>
+            </a>   
 
           </ul>
         </div><!-- /wrapper -->

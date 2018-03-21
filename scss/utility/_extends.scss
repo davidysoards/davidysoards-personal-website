@@ -32,6 +32,45 @@
   }
 }
 
+// =HERO
+%hero {
+  display: grid;
+  background: $color-primary-light;
+  min-height: 100vh;
+  z-index: 75;
+  h1 {
+    @include mq-s {
+      font-size: 6em;
+    }
+    @include mq-m {
+      font-size: 8em;
+    }
+    @include mq-l {
+      font-size: 9.2em;
+    }
+  }
+  .arrow {
+    grid-column: 1 / -1;
+    font-size: 2em;
+    opacity: 0;
+  }
+}
+
+%hero-wrapper {
+  display: grid;
+  grid-gap: 1em;
+  align-content: center;
+  align-items: center;
+  margin-top: 194px;
+  padding-top: 0;
+  padding-bottom: 5%;
+  overflow: hidden;
+  @include mq-m {
+    margin-top: 100px;
+  }
+}
+
+
 // =Responsive grid for portfolio images
 %category-grid {
   display: grid;

@@ -1,0 +1,100 @@
+/* =ANIMATIONS ==================================== */
+
+// =FLOAT
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// =BOUNCE
+@keyframes bounce {
+  0%, 10%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+// =TADA
+@keyframes tada {
+  0% {
+    transform: scale(1);
+  }
+
+  10%, 20% {
+    transform: scale(.9) rotate(-8deg);
+  }
+
+  30%, 50%, 70% {
+    transform: scale(1.2) rotate(8deg);
+  }
+
+  40%, 60% {
+    transform: scale(1.2) rotate(-8deg);
+  }
+
+  80%, 100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+// =PULSE
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  75% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+// =Animation classes
+.float {
+  animation: float 2s linear infinite;
+}
+
+.bounce,
+.bounce-hover:hover {
+  animation: bounce 1s ease infinite;
+}
+
+.tada,
+.tada-hover:hover {
+  animation: tada 2s linear;
+}
+
+.pulse,
+.pulse-hover:hover {
+  animation: pulse 0.7s ease-in-out;
+}
+
