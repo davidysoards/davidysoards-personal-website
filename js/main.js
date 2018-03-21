@@ -20,7 +20,7 @@ const $headBalloon = $('.head-balloon'),
       headTl = new TimelineLite();
       
 headTl
-.fromTo($bighead, 1.3, {y: '150%'}, {y: '0%', autoAlpha: 1, ease: Back.easeOut.config(1)})
+.fromTo($bighead, 1.3, {y: '150%'}, {y: '0%', autoAlpha: 1, ease: Back.easeOut.config(0.9)})
 .fromTo($balloon, 0.7, {x: '+=40', y: '+=20'}, {x: 0, y: 0, autoAlpha: 1, ease: Power1.easeOut}, '-=0.3')
 .to($hello, 0.4, {autoAlpha: 1}, '-=0.4')
 ;

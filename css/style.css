@@ -52,7 +52,7 @@
   overflow: hidden; }
   @media only screen and (min-width: 768px) {
     .hero.home .wrapper, .hero.portfolio .wrapper, .hero.about .wrapper {
-      margin-top: 100px; } }
+      margin-top: 110px; } }
 
 .graphics-list, .animation-list, .art-list {
   display: grid;
