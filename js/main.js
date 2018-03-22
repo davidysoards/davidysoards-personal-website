@@ -38,6 +38,12 @@ TweenLite.fromTo($desk, 1.7, {x: '300%', autoAlpha: 0}, {x: '0%', autoAlpha: 1, 
 const $headshot = $('#headshot');
 TweenLite.fromTo($headshot, 1.7, {scale: 0, autoAlpha: 0}, {scale: 1, autoAlpha: 1, ease: Back.easeOut.config(1)});
 
+// project page logos
+const $projectImage = $('.project-image');
+TweenMax.fromTo($projectImage, 1.7, {scale: 0, opacity: 0, rotation: 180},
+  {scale: 1, opacity: 1, rotation: 0, ease:Elastic.easeInOut});
+
+
 /********** 
 =SCROLL TO IDs
 **********/

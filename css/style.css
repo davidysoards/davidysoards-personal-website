@@ -22,26 +22,28 @@
     .main-nav a:hover, .fixed-nav a:hover {
       color: #ed1c24; }
 
-.hero.home, .hero.portfolio, .hero.about {
+.hero-home, .hero-portfolio, .hero-about, .hero-projects {
   display: grid;
   background: #8ac5df;
   min-height: 100vh;
   z-index: 75; }
+  .hero-home img, .hero-portfolio img, .hero-about img, .hero-projects img {
+    box-shadow: none; }
   @media only screen and (min-width: 576px) {
-    .hero.home h1, .hero.portfolio h1, .hero.about h1 {
+    .hero-home h1, .hero-portfolio h1, .hero-about h1, .hero-projects h1 {
       font-size: 6em; } }
   @media only screen and (min-width: 768px) {
-    .hero.home h1, .hero.portfolio h1, .hero.about h1 {
+    .hero-home h1, .hero-portfolio h1, .hero-about h1, .hero-projects h1 {
       font-size: 8em; } }
   @media only screen and (min-width: 1024px) {
-    .hero.home h1, .hero.portfolio h1, .hero.about h1 {
+    .hero-home h1, .hero-portfolio h1, .hero-about h1, .hero-projects h1 {
       font-size: 9.2em; } }
-  .hero.home .arrow, .hero.portfolio .arrow, .hero.about .arrow {
+  .hero-home .arrow, .hero-portfolio .arrow, .hero-about .arrow, .hero-projects .arrow {
     grid-column: 1 / -1;
     font-size: 2em;
     opacity: 0; }
 
-.hero.home .wrapper, .hero.portfolio .wrapper, .hero.about .wrapper {
+.hero-home .wrapper, .hero-portfolio .wrapper, .hero-about .wrapper, .hero-projects .wrapper {
   display: grid;
   grid-gap: 1em;
   align-content: center;
@@ -51,7 +53,7 @@
   padding-bottom: 5%;
   overflow: hidden; }
   @media only screen and (min-width: 768px) {
-    .hero.home .wrapper, .hero.portfolio .wrapper, .hero.about .wrapper {
+    .hero-home .wrapper, .hero-portfolio .wrapper, .hero-about .wrapper, .hero-projects .wrapper {
       margin-top: 110px; } }
 
 .graphics-list, .animation-list, .art-list {
@@ -522,12 +524,18 @@ a {
 
 img {
   max-width: 100%;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15); }
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.15); }
 
 ul {
   margin: 0;
   padding: 0;
   list-style: none; }
+
+figcaption {
+  margin-top: 0.5em; }
+
+figure {
+  margin: 0; }
 
 /* =LIGHTBOX ==================================== */
 html.lb-disable-scrolling {
@@ -906,9 +914,6 @@ button {
   padding: 1em 2.5%;
   max-width: 1200px; }
 
-.hero img {
-  box-shadow: none; }
-
 /* =HEADER ==================================== */
 nav a.current-page {
   border-bottom: 2px solid #ed1c24; }
@@ -1052,7 +1057,7 @@ main {
 
 /* =HOME PAGE ==================================== */
 @media only screen and (min-width: 576px) {
-  .hero.home .wrapper {
+  .hero-home .wrapper {
     grid-template-columns: 1fr 2fr; } }
 
 .head-balloon {
@@ -1083,11 +1088,20 @@ main {
       .i-create ul {
         grid-gap: 1em 3em;
         grid-template-columns: repeat(2, minmax(300px, 1fr)); } }
-  .i-create .i-create-category {
-    display: grid;
-    justify-items: center;
-    margin-bottom: 1em;
-    max-width: 400px; }
+
+.i-create-category {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 1em;
+  max-width: 400px; }
+  .i-create-category a img {
+    transition: opacity 0.2s linear; }
+    .i-create-category a img:hover {
+      opacity: 0.7; }
+  .i-create-category a h3 {
+    transition: color 0.2s linear; }
+    .i-create-category a h3:hover {
+      color: #ed1c24; }
 
 .process ul {
   display: grid;
@@ -1105,7 +1119,7 @@ main {
 
 /* =PORTFOLIO PAGE ==================================== */
 @media only screen and (min-width: 576px) {
-  .hero.portfolio .wrapper {
+  .hero-portfolio .wrapper {
     grid-template-columns: 1fr 2fr; } }
 
 #desk-illustration {
@@ -1143,10 +1157,10 @@ main {
 
 /* =ABOUT PAGE ==================================== */
 @media only screen and (min-width: 576px) {
-  .hero.about .wrapper {
+  .hero-about .wrapper {
     grid-template-columns: 1fr 1fr;
     grid-gap: 3em; } }
-.hero.about h2.subtitle {
+.hero-about h2.subtitle {
   font-size: 1.9em;
   color: white; }
 
@@ -1159,6 +1173,28 @@ main.about .wrapper {
 main.about h2 {
   text-align: left; }
 main.about p {
+  font-size: 1.3em;
+  text-align: left; }
+
+/* =PROJECT PAGES ==================================== */
+@media only screen and (min-width: 576px) {
+  .hero-projects .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3em; } }
+.hero-projects h2.subtitle {
+  font-size: 1.9em;
+  color: white; }
+
+.project-image {
+  max-height: 66vh;
+  opacity: 0; }
+
+main.projects .wrapper {
+  max-width: 45em; }
+main.projects h2,
+main.projects h3 {
+  text-align: left; }
+main.projects p {
   font-size: 1.3em;
   text-align: left; }
 

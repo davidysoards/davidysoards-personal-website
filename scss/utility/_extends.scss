@@ -38,6 +38,9 @@
   background: $color-primary-light;
   min-height: 100vh;
   z-index: 75;
+  img {
+    box-shadow: none;
+  }
   h1 {
     @include mq-s {
       font-size: 6em;

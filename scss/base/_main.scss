@@ -101,11 +101,6 @@ button {
   max-width: 1200px;
 }
 
-.hero  {
-  img {
-    box-shadow: none;
-  }
-}
 
 /* =HEADER ==================================== */
 
@@ -304,7 +299,7 @@ main {
 
 /* =HOME PAGE ==================================== */
 
-.hero.home {
+.hero-home {
   @extend %hero;
   .wrapper {
     @extend %hero-wrapper;
@@ -352,11 +347,25 @@ main {
       grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
   }
-  .i-create-category {
-    display: grid;
-    justify-items: center;
-    margin-bottom: 1em;
-    max-width: 400px;
+}
+.i-create-category {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 1em;
+  max-width: 400px;
+  a {
+    img {
+      transition: opacity 0.2s linear;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    h3 {
+      transition: color 0.2s linear;
+      &:hover {
+        color: $color-secondary;
+      }
+    }
   }
 }
 
@@ -385,7 +394,7 @@ main {
 
 /* =PORTFOLIO PAGE ==================================== */
 
-.hero.portfolio {
+.hero-portfolio {
   @extend %hero;
   .wrapper {
     @extend %hero-wrapper;
@@ -469,7 +478,7 @@ main {
 }
 
 /* =ABOUT PAGE ==================================== */
-.hero.about {
+.hero-about {
   @extend %hero;
   .wrapper {
     @extend %hero-wrapper;
@@ -483,7 +492,6 @@ main {
     color: white;
   }
 }
-
 
 #headshot {
   max-height: 75vh;
@@ -502,3 +510,42 @@ main.about {
     text-align: left;
   }
 }
+
+
+/* =PROJECT PAGES ==================================== */
+// =May Fine Woodworking
+.hero-projects {
+  @extend %hero;
+  .wrapper {
+    @extend %hero-wrapper;
+    @include mq-s {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3em;
+    }
+  }
+  h2.subtitle {
+    font-size: 1.9em;
+    color: white;
+  }
+}
+
+.project-image {
+  max-height: 66vh;
+  opacity: 0;
+}
+
+main.projects {
+  .wrapper {
+    max-width: 45em;
+  }
+  h2,
+  h3 {
+    text-align: left;
+  }
+  p {
+    font-size: 1.3em;
+    text-align: left;
+  }
+}
+
+
