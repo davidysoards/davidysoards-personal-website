@@ -238,12 +238,29 @@ footer {
 
 .contact-form {
   display: grid;
-  grid-gap: 1em;
+  // grid-gap: 1em;
   max-width: 768px;
   margin: 0 auto;
-  input,
+  input{
+    width: 100%;
+  }
   textarea {
     width: 100%;
+    height: 150px;
+    resize: vertical;
+  }
+  .feedback-input {
+    color: $color-text;
+    font-family: $pegasus;
+    padding: 0.5em;
+    width:100%;
+    border: 3px solid rgba(0,0,0,0);
+    &:focus {
+      border: 3px solid $color-primary;
+      color: $color-primary;
+      outline: none;
+      padding: 0.5em;
+    }
   }
   button {
     width: auto;
@@ -489,6 +506,7 @@ main {
   @extend %hero;
   .wrapper {
     @extend %hero-wrapper;
+    overflow: visible;
     @include mq-s {
       grid-template-columns: 1fr 1fr;
       grid-gap: 3em;
@@ -554,5 +572,3 @@ main.projects {
     text-align: left;
   }
 }
-
-

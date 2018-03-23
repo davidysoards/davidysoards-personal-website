@@ -1,11 +1,21 @@
 <!doctype html>
 <html class="no-js" lang="">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116321176-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-116321176-1');
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>David Soards | May Fine Woodworking</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://davidysoards.com/og-image.png">
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
@@ -162,12 +172,27 @@
       <section id="contact">
         <div class="wrapper">
           <h2>Let's Make Something Together</h2>
-          <form action="mailto:davidysoards@gmail.com" method="post" enctype="text/plain" class="contact-form">
-            <input type="text" name="name" placeholder="Name">
-            <input type="text" name="mail" placeholder="Email">
-            <textarea id="msg" name="user_msg" placeholder="Message"></textarea>
+          <form class="contact-form" id="reused_form">
+            <p>
+              <input name="name" type="text" class="feedback-input" required placeholder="📛 Name" id="name" aria-label="name" />
+            </p>
+            <p>
+              <input name="email" type="email" required class="feedback-input" id="email" placeholder="✉️ Email" aria-label="email" />
+            </p>
+            <p>
+              <textarea name="message" class="feedback-input" id="comment" placeholder="🖊️ Message" aria-label="message"></textarea>
+            </p>
             <button type="submit">Send Message</button>
           </form>
+          <div id="error_message" style="width:100%; height:100%; display:none; ">
+            <h4>
+                Error
+            </h4>
+            Sorry there was an error sending your form. 
+          </div>
+          <div id="success_message" style="width:100%; height:100%; display:none; ">
+            <h2>Yay! Your message was sent successfully.</h2>
+          </div>
         </div>
       </section>
 
@@ -205,14 +230,7 @@
       lightbox.option({
         'fitImagesInViewport': false
       })
-  </script>
-
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-      ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
- 
+
   </body>
 </html>

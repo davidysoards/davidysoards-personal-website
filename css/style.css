@@ -1014,12 +1014,26 @@ footer {
 
 .contact-form {
   display: grid;
-  grid-gap: 1em;
   max-width: 768px;
   margin: 0 auto; }
-  .contact-form input,
-  .contact-form textarea {
+  .contact-form input {
     width: 100%; }
+  .contact-form textarea {
+    width: 100%;
+    height: 150px;
+    resize: vertical; }
+  .contact-form .feedback-input {
+    color: rgba(0, 0, 0, 0.8);
+    font-family: "Wolpe Pegasus W01 Regular", Georgia, "Times New Roman", serif;
+    padding: 0.5em;
+    width: 100%;
+    border: 3px solid rgba(0, 0, 0, 0); }
+    .contact-form .feedback-input:focus {
+      background: #fff;
+      border: 3px solid #62b1d4;
+      color: #62b1d4;
+      outline: none;
+      padding: 0.5em; }
   .contact-form button {
     width: auto;
     background: rgba(0, 0, 0, 0.05);
@@ -1167,10 +1181,12 @@ main {
   padding-bottom: 2em; }
 
 /* =ABOUT PAGE ==================================== */
-@media only screen and (min-width: 576px) {
-  .hero-about .wrapper {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3em; } }
+.hero-about .wrapper {
+  overflow: visible; }
+  @media only screen and (min-width: 576px) {
+    .hero-about .wrapper {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3em; } }
 .hero-about h2.subtitle {
   font-size: 1.9em;
   color: white; }
