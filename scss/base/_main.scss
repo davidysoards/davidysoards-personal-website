@@ -170,15 +170,17 @@ nav {
 }
 
 // =FIXED HEADER =========
+/*** change to footer ***/
 .fixed-header {
   position: fixed;
+  bottom: 0;
   width: 100%;
   z-index: 50;
   background: rgba($color: white, $alpha: 0.95);
   box-shadow: 1px 0 4px rgba($color: black, $alpha: 0.3);
   .wrapper {
     display: flex;
-    max-width: none;
+    // max-width: none;
     align-items: center;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -197,9 +199,9 @@ nav {
 .logo-fixed {
   img {
     width: 50px;
-    // @include mq-xs {
-    //   display: none;
-    // }
+    @include mq-xs {
+      width: 36px;
+    }
   }
 }
 
@@ -258,11 +260,16 @@ footer {
   }
 }
 
+
 // =COPYRIGHT & SOCIALS
 .copyright {
   grid-column: 1 / -1;
   background: $color-primary;
   color: white;
+  margin-bottom: 60px;
+  @include mq-xs {
+    margin-bottom: 46px;
+  }
   .wrapper {
     display: grid;
     grid-gap: 1em;

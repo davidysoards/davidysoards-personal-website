@@ -42,6 +42,9 @@
     grid-column: 1 / -1;
     font-size: 2em;
     opacity: 0; }
+    @media only screen and (max-width: 575px) {
+      .hero-home .arrow, .hero-portfolio .arrow, .hero-about .arrow, .hero-projects .arrow {
+        display: none; } }
 
 .hero-home .wrapper, .hero-portfolio .wrapper, .hero-about .wrapper, .hero-projects .wrapper {
   display: grid;
@@ -964,15 +967,16 @@ nav a.current-page {
     font-size: 1.7em;
     margin-left: auto; } }
 
+/*** change to footer ***/
 .fixed-header {
   position: fixed;
+  bottom: 0;
   width: 100%;
   z-index: 50;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3); }
   .fixed-header .wrapper {
     display: flex;
-    max-width: none;
     align-items: center;
     padding-top: 5px;
     padding-bottom: 5px; }
@@ -983,6 +987,9 @@ nav a.current-page {
 
 .logo-fixed img {
   width: 50px; }
+  @media only screen and (max-width: 575px) {
+    .logo-fixed img {
+      width: 36px; } }
 
 .fixed-nav a {
   color: #ed1c24; }
@@ -1028,7 +1035,11 @@ footer {
 .copyright {
   grid-column: 1 / -1;
   background: #62b1d4;
-  color: white; }
+  color: white;
+  margin-bottom: 60px; }
+  @media only screen and (max-width: 575px) {
+    .copyright {
+      margin-bottom: 46px; } }
   .copyright .wrapper {
     display: grid;
     grid-gap: 1em; }
