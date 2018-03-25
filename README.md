@@ -13,8 +13,7 @@ SVGs were created in Adobe Illustrator and cleaned up using SVGOMG.
 The Contact form is functional and uses files and code snippets from http://reusableforms.com/
 The icons in the placeholders are emojis written directly into the html using Rocket :)
 
-
-
+This project was my first time using SASS and I can't see myself using regular CSS ever again. Love the SASS!
 
 
 
