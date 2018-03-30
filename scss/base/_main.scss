@@ -322,10 +322,6 @@ main {
 
 
 /* =HOME PAGE ==================================== */
-#heading {
-  visibility: hidden;
-  font-kerning: none;
-}
 
 .hero-home {
   @extend %hero;
@@ -516,9 +512,12 @@ main {
       grid-gap: 3em;
     }
   }
-  h2#subtitle {
+  #subtitle {
     font-size: 1.9em;
     color: white;
+    @include mq-xs {
+      font-size: 1.6em;
+    }
   }
 }
 

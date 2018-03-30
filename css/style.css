@@ -453,6 +453,8 @@ figure {
     @media only screen and (max-width: 575px) {
       .hero-home .arrow, .hero-portfolio .arrow, .hero-about .arrow, .hero-projects .arrow {
         display: none; } }
+  .hero-home #heading, .hero-portfolio #heading, .hero-about #heading, .hero-projects #heading {
+    visibility: hidden; }
 
 .hero-home .wrapper, .hero-portfolio .wrapper, .hero-about .wrapper, .hero-projects .wrapper {
   display: grid;
@@ -1080,10 +1082,6 @@ main {
   margin-top: 1em; }
 
 /* =HOME PAGE ==================================== */
-#heading {
-  visibility: hidden;
-  font-kerning: none; }
-
 @media only screen and (min-width: 576px) {
   .hero-home .wrapper {
     grid-template-columns: 1fr 2fr; } }
@@ -1190,9 +1188,12 @@ main {
     .hero-about .wrapper {
       grid-template-columns: 1fr 1fr;
       grid-gap: 3em; } }
-.hero-about h2#subtitle {
+.hero-about #subtitle {
   font-size: 1.9em;
   color: white; }
+  @media only screen and (max-width: 575px) {
+    .hero-about #subtitle {
+      font-size: 1.6em; } }
 
 #headshot {
   max-height: 75vh;

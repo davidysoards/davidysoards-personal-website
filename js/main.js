@@ -113,11 +113,9 @@ const $heading = $('#heading'),
       splitHeading = new SplitText($heading, {type:"words"});
 
 TweenLite.set($heading, {perspective:360, visibility: "visible"});
-TweenMax.staggerFrom(splitHeading.words, 0.7, {autoAlpha:0, scale:0, y:-80, x:-120, rotationX:180, transformOrigin:"0% 50% -50%", ease:Back.easeOut}, 0.1, finished);
+TweenMax.staggerFrom(splitHeading.words, 0.7, {autoAlpha:0, scale:0, y:-80, x:-120, rotationX:180, transformOrigin:"0% 50% -50%", ease:Back.easeOut}, 0.1);
 TweenLite.from($subtitle, 1, {autoAlpha:0, y:80, ease: Power1.easeOut, delay: 0.5});
-function finished(){
-  splitHeading.revert();
-}
+
 
 /********** 
 =SCROLL TO IDs
