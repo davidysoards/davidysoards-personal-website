@@ -322,6 +322,10 @@ main {
 
 
 /* =HOME PAGE ==================================== */
+#heading {
+  visibility: hidden;
+  font-kerning: none;
+}
 
 .hero-home {
   @extend %hero;
@@ -512,7 +516,7 @@ main {
       grid-gap: 3em;
     }
   }
-  h2.subtitle {
+  h2#subtitle {
     font-size: 1.9em;
     color: white;
   }
@@ -548,15 +552,11 @@ main.about {
       grid-gap: 3em;
     }
   }
-  h2.subtitle {
-    font-size: 1.9em;
-    color: white;
-  }
 }
 
 .project-image {
   max-height: 66vh;
-  opacity: 0;
+  visibility: hidden;
 }
 
 main.projects {

@@ -105,9 +105,19 @@ TweenLite.fromTo($headshot, 1.7, {scale: 0, autoAlpha: 0}, {scale: 1, autoAlpha:
 
 // project page logos
 const $projectImage = $('.project-image');
-TweenMax.fromTo($projectImage, 1.7, {scale: 0, opacity: 0, rotation: 180},
-  {scale: 1, opacity: 1, rotation: 0, ease:Elastic.easeInOut});
+TweenMax.from($projectImage, 1.7, {scale: 0, autoAlpha: 0, rotation: 180, ease:Elastic.easeInOut});
 
+// tween main page headings
+const $heading = $('#heading'),
+      $subtitle = $('#subtitle'),
+      splitHeading = new SplitText($heading, {type:"words"});
+
+TweenLite.set($heading, {perspective:360, visibility: "visible"});
+TweenMax.staggerFrom(splitHeading.words, 0.7, {autoAlpha:0, scale:0, y:-80, x:-120, rotationX:180, transformOrigin:"0% 50% -50%", ease:Back.easeOut}, 0.1, finished);
+TweenLite.from($subtitle, 1, {autoAlpha:0, y:80, ease: Power1.easeOut, delay: 0.5});
+function finished(){
+  splitHeading.revert();
+}
 
 /********** 
 =SCROLL TO IDs

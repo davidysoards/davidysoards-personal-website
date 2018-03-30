@@ -1080,6 +1080,10 @@ main {
   margin-top: 1em; }
 
 /* =HOME PAGE ==================================== */
+#heading {
+  visibility: hidden;
+  font-kerning: none; }
+
 @media only screen and (min-width: 576px) {
   .hero-home .wrapper {
     grid-template-columns: 1fr 2fr; } }
@@ -1186,7 +1190,7 @@ main {
     .hero-about .wrapper {
       grid-template-columns: 1fr 1fr;
       grid-gap: 3em; } }
-.hero-about h2.subtitle {
+.hero-about h2#subtitle {
   font-size: 1.9em;
   color: white; }
 
@@ -1207,13 +1211,10 @@ main.about p {
   .hero-projects .wrapper {
     grid-template-columns: 1fr 1fr;
     grid-gap: 3em; } }
-.hero-projects h2.subtitle {
-  font-size: 1.9em;
-  color: white; }
 
 .project-image {
   max-height: 66vh;
-  opacity: 0; }
+  visibility: hidden; }
 
 main.projects .wrapper {
   max-width: 45em; }
