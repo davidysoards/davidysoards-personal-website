@@ -2,15 +2,15 @@
 //  Partial Imports
 // ======================================
 
-// Utility
-@import 'utility/variables.scss',
-        'utility/mixins.scss',
-        'utility/extends.scss';
-
 // Resets
 @import 'resets/normalize.scss',
         'resets/base.scss',
         'resets/resets.scss';
+
+// Utility
+@import 'utility/variables.scss',
+        'utility/mixins.scss',
+        'utility/extends.scss';
 
 // Plugin
 @import 'extras/lightbox2.scss',
