@@ -340,7 +340,7 @@ main {
   #bighead,
   #balloon,
   #hello {
-    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -429,8 +429,8 @@ main {
 }
 
 #desk-illustration {
-  opacity: 0;
   max-height: 75vh;
+  visibility: hidden;
 }
 
 .jump-to {
@@ -523,7 +523,7 @@ main {
 
 #headshot {
   max-height: 75vh;
-  opacity: 0;
+  visibility: hidden;
 }
 
 main.about {

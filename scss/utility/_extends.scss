@@ -55,7 +55,7 @@
   .arrow {
     grid-column: 1 / -1;
     font-size: 2em;
-    opacity: 0;
+    visibility: hidden;
     @include mq-xs {
       display: none;
     }
