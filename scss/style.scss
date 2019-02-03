@@ -6,7 +6,8 @@
 @import 'resets/normalize.scss', 'resets/base.scss', 'resets/resets.scss';
 
 // Utility
-@import 'utility/variables.scss', 'utility/mixins.scss', 'utility/extends.scss';
+@import 'utility/fonts.scss', 'utility/variables.scss', 'utility/mixins.scss',
+  'utility/extends.scss';
 
 // Plugin
 @import 'extras/lightbox2.scss', 'extras/youtubelightbox.scss',
