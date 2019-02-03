@@ -70,13 +70,16 @@ p {
 }
 a {
   color: $color-secondary;
-  transition: color 0.2s linear,
-              opacity 0.2s linear;
+  transition: color 0.2s linear, opacity 0.2s linear;
 }
 
 button {
-  background-image: linear-gradient(to bottom,
-    darken($color-secondary,7%) 0%, $color-secondary 50%, darken($color-secondary,13%) 100%);
+  background-image: linear-gradient(
+    to bottom,
+    darken($color-secondary, 7%) 0%,
+    $color-secondary 50%,
+    darken($color-secondary, 13%) 100%
+  );
   background-size: auto 200%;
   border: none;
   padding: 0.5em;
@@ -100,7 +103,6 @@ button {
   padding: 1em 2.5%;
   max-width: 1200px;
 }
-
 
 /* =HEADER ==================================== */
 
@@ -212,7 +214,6 @@ nav {
   }
 }
 
-
 /* =FOOTER ==================================== */
 
 footer {
@@ -241,7 +242,7 @@ footer {
   // grid-gap: 1em;
   max-width: 768px;
   margin: 0 auto;
-  input{
+  input {
     width: 100%;
   }
   textarea {
@@ -253,8 +254,8 @@ footer {
     color: $color-text;
     font-family: $pegasus;
     padding: 0.5em;
-    width:100%;
-    border: 3px solid rgba(0,0,0,0);
+    width: 100%;
+    border: 3px solid rgba(0, 0, 0, 0);
     &:focus {
       border: 3px solid $color-primary;
       color: $color-primary;
@@ -276,7 +277,6 @@ footer {
     }
   }
 }
-
 
 // =COPYRIGHT & SOCIALS
 .copyright {
@@ -319,7 +319,6 @@ main {
   grid-gap: 1em;
   margin-top: 1em;
 }
-
 
 /* =HOME PAGE ==================================== */
 
@@ -399,17 +398,17 @@ main {
     display: grid;
     grid-gap: 1em;
     h3 {
-    text-transform: none;
-    color: $color-text;
+      text-transform: none;
+      color: $color-text;
     }
     @include mq-m {
       grid-template-columns: repeat(3, minmax(150px, 1fr));
     }
-  li {
-    p {
-      text-align: left;
+    li {
+      p {
+        text-align: left;
+      }
     }
-  }
   }
   .process-button-container {
     margin-top: 1em;
@@ -437,7 +436,7 @@ main {
   p {
     margin-bottom: 0.5em;
   }
-  .categories-list { 
+  .categories-list {
     display: grid;
     grid-gap: 0.6em;
     grid-template-columns: 1fr 1fr;
@@ -538,7 +537,6 @@ main.about {
     text-align: left;
   }
 }
-
 
 /* =PROJECT PAGES ==================================== */
 // =May Fine Woodworking

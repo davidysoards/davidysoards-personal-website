@@ -6,25 +6,25 @@
 
 // max-width
 @mixin mq-xs {
-    @media only screen and #{$x-small-bp} {
-        @content;
-    }
+  @media only screen and #{$x-small-bp} {
+    @content;
+  }
 }
 
 @mixin mq-s {
-    @media only screen and #{$small-bp} {
-        @content;
-    }
+  @media only screen and #{$small-bp} {
+    @content;
+  }
 }
 
 @mixin mq-m {
-    @media only screen and #{$medium-bp} {
-        @content;
-    }
+  @media only screen and #{$medium-bp} {
+    @content;
+  }
 }
 
 @mixin mq-l {
-    @media only screen and #{$large-bp} {
-        @content;
-    }
+  @media only screen and #{$large-bp} {
+    @content;
+  }
 }

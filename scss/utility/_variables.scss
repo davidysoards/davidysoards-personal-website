@@ -4,12 +4,11 @@
 
 // COLORS
 $color-primary: #62b1d4; // light blue
-$color-primary-light: lighten($color-primary,10%); 
-$color-primary-lighter: lighten($color-primary,30%); 
-$color-primary-dark: darken($color-primary,10%);
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-lighter: lighten($color-primary, 30%);
+$color-primary-dark: darken($color-primary, 10%);
 $color-secondary: #ed1c24;
 $color-text: rgba(black, 0.8);
-
 
 // Breakpoints
 
@@ -20,12 +19,10 @@ $large-bp: '(min-width: 1024px)';
 
 // Font Stacks
 
-$serif: Georgia, "Times New Roman", serif;
-$sans: "Trebuchet MS", Verdana, sans-serif;
+$serif: Georgia, 'Times New Roman', serif;
+$sans: 'Trebuchet MS', Verdana, sans-serif;
 
-$albertus: "Albertus Nova W01 Light", $sans;
-$fanfare: "Wolpe Fanfare W01 Regular", $sans;
-$fanfare-black: "Wolpe Fanfare W01 Black", $sans;
-$pegasus: "Wolpe Pegasus W01 Regular", $serif;
-
-
+$albertus: 'Albertus Nova W01 Light', $sans;
+$fanfare: 'Wolpe Fanfare W01 Regular', $sans;
+$fanfare-black: 'Wolpe Fanfare W01 Black', $sans;
+$pegasus: 'Wolpe Pegasus W01 Regular', $serif;

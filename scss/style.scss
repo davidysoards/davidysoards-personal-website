@@ -3,20 +3,14 @@
 // ======================================
 
 // Resets
-@import 'resets/normalize.scss',
-        'resets/base.scss',
-        'resets/resets.scss';
+@import 'resets/normalize.scss', 'resets/base.scss', 'resets/resets.scss';
 
 // Utility
-@import 'utility/variables.scss',
-        'utility/mixins.scss',
-        'utility/extends.scss';
+@import 'utility/variables.scss', 'utility/mixins.scss', 'utility/extends.scss';
 
 // Plugin
-@import 'extras/lightbox2.scss',
-        'extras/youtubelightbox.scss',
-        'extras/animation.scss';
+@import 'extras/lightbox2.scss', 'extras/youtubelightbox.scss',
+  'extras/animation.scss';
 
 //Base
 @import 'base/main.scss';
-
