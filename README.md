@@ -1,4 +1,4 @@
-#David Y. Soards Personal Website
+# David Y. Soards Personal Website
 
 This is the version control of my personal website located at https://davidysoards.com
 It was created as part of my front-end development project for **Code Louisville.**
