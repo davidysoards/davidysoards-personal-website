@@ -1,7 +1,11 @@
 # David Y. Soards Personal Website
 
-This is the version control of my personal website located at https://davidysoards.com
+This was the version control of my personal website located at https://davidysoards.com
 It was created as part of my front-end development project for **Code Louisville.**
+
+I have now updated this site to use Vue/Nuxt and Contentful.
+
+That repo is https://github.com/davidysoards/portfolio-site-vue-nuxt
 
 It uses **CSS Grid** extensively and is therefore a complete wreck on IE11 or below, but I am OK with that.
 There is also, at the time of writing this, an issue in Microsoft Edge (ONLY) with my youtube lightbox.
